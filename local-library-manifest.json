@@ -1849,6 +1849,8 @@
     "title": "晶泰控股：旧模式退潮，盈利承压后的 AI 成长再平衡",
     "chars": 1056,
     "read": true,
+    "featured": true,
+    "featured_reason": "经营更新｜晶泰预亏后拆开授权收入高基数、持续收入与研发消耗，提出可继续跟踪的商业化指标。",
     "has_note": true,
     "themes": [
       "晶泰",
@@ -1871,6 +1873,8 @@
     "title": "谷歌开奖：水龙头拧得更大，现金流却转负了",
     "chars": 2176,
     "read": true,
+    "featured": true,
+    "featured_reason": "事后更新｜把谷歌增加AI投入与自由现金流转负并列，区分供应商的新增订单和付款方的股东回报。",
     "has_note": true,
     "themes": [
       "GOOG",
@@ -1897,6 +1901,8 @@
     "title": "谷歌今晚发财报，我只看一个数字",
     "chars": 2512,
     "read": true,
+    "featured": true,
+    "featured_reason": "事前预案｜财报公布前写出资本开支上调、持平、下调三种情景，并用云收入与现金流检验结果。",
     "has_note": true,
     "themes": [
       "GOOG",
@@ -1999,6 +2005,8 @@
     "title": "对话股主晓风：不满仓、不裸杠杆、先保战果——AI 从业者的投资自律",
     "chars": 4737,
     "read": true,
+    "featured": true,
+    "featured_reason": "风险纪律｜本人回顾上涨加仓后倒亏、两倍产品减得不够，把产业判断与仓位和杠杆预算分开。",
     "has_note": true,
     "themes": [
       "GOOGL",
@@ -3162,6 +3170,8 @@
     "title": "做个复盘～",
     "chars": 1194,
     "read": true,
+    "featured": true,
+    "featured_reason": "真实复盘｜记录正股和期权分批买入、反弹后兑现，也承认部分抄底失败，能学习仓位如何随阶段调整。",
     "has_note": true,
     "themes": [
       "市场阶段",
@@ -3343,6 +3353,8 @@
     "title": "美股实盘：硅基生命的房地产牛市（20260510）",
     "chars": 2125,
     "read": true,
+    "featured": true,
+    "featured_reason": "仓位管理｜闪迪接近组合四成时卖出部分转向康宁；单股集中下降，但AI基建的共同风险仍在。",
     "has_note": true,
     "themes": [
       "GOOG",
@@ -4663,6 +4675,8 @@
     "title": "202602 复盘 -6.8%",
     "chars": 1614,
     "read": true,
+    "featured": true,
+    "featured_reason": "观点与仓位｜早知市场转向防守和周期，账户仍近乎满仓科技；复盘判断为何没变成实际配置。",
     "has_note": true,
     "themes": [
       "SNDK",
@@ -6339,6 +6353,8 @@
     "title": "2025 年投资总结-- AI 贯穿始终",
     "chars": 1518,
     "read": true,
+    "featured": true,
+    "featured_reason": "年度复盘｜把正股、期权、恐慌买入和减少倍数产品串起来，看工具收益与执行精力怎样改变做法。",
     "has_note": true,
     "themes": [
       "NVDA",
@@ -7572,6 +7588,8 @@
     "title": "微软换Google：长期看好与当下不买可以并存",
     "chars": 1267,
     "read": true,
+    "featured": true,
+    "featured_reason": "相对价值｜仍看好微软，却因谷歌当时的价格与竞争位置更有吸引力而换仓；好公司和好买价需要分开判断。",
     "has_note": true,
     "themes": [
       "GOOG",
@@ -10784,6 +10802,8 @@
     "title": "小白学美股心得记录 7",
     "chars": 1059,
     "read": true,
+    "featured": true,
+    "featured_reason": "分批计划｜事先划分资金、设加仓梯度并保留最后一笔；与后续亚马逊加得过快的复盘连读更有价值。",
     "has_note": true,
     "themes": [
       "分批建仓",
@@ -11237,6 +11257,8 @@
     "title": "2025年3月部署：给基本面设置可观察触发点",
     "chars": 683,
     "read": true,
+    "featured": true,
+    "featured_reason": "验证条件｜把芯片降本或提价、Robotaxi扩张和光伏供需写成下一步行动的具体观察点。",
     "has_note": true,
     "themes": [
       "NVDA",
@@ -11611,6 +11633,8 @@
     "title": "PLTR 的增长飞轮 - AIP",
     "chars": 1454,
     "read": true,
+    "featured": true,
+    "featured_reason": "产品到收入｜用PLTR的Foundry、Ontology和AIP梳理企业部署与客户扩张；合同数口径需另行核对。",
     "has_note": true,
     "themes": [
       "PLTR",
@@ -11682,6 +11706,8 @@
     "title": "谷歌 2024Q4 财报简评-Z 先生",
     "chars": 1443,
     "read": true,
+    "featured": true,
+    "featured_reason": "财报与仓位｜谷歌云收入低于预期、资本开支升高时仍看好，但因单股已约占四分之一而没有继续加仓。",
     "has_note": true,
     "themes": [
       "资本开支",
@@ -11956,6 +11982,8 @@
     "title": "聊聊如何从护城河角度来看投资",
     "chars": 857,
     "read": true,
+    "featured": true,
+    "featured_reason": "护城河｜模型成本下降后，追问价值会留在模型、客户数据还是业务工作流，并提出留存与迁移成本的检验。",
     "has_note": true,
     "themes": [
       "护城河",
@@ -12624,6 +12652,8 @@
     "title": "想赚钱，先忘掉成本价",
     "chars": 1815,
     "read": true,
+    "featured": true,
+    "featured_reason": "机会成本｜卖掉仍亏的资产、以更高价格买回MSTR，具体说明今天该比较的是未来收益与风险，而非自己的成本价。",
     "has_note": true,
     "themes": [],
     "source": "https://longbridge.cn/zh-CN/topics/25730309",
@@ -13165,6 +13195,8 @@
     "title": "升能崩盘交易：先定义参与机制，再限定退出",
     "chars": 2595,
     "read": true,
+    "featured": true,
+    "featured_reason": "交易复盘｜完整交代升能的买入、仓位和退出，展示参与机制；对手身份等解释仍须视为猜想。",
     "has_note": true,
     "themes": [
       "2459",
@@ -13406,6 +13438,8 @@
     "title": "AI产业正循环：下游回报为何决定上游持续期",
     "chars": 2219,
     "read": true,
+    "featured": true,
+    "featured_reason": "AI利润链｜从下游付费与投资回报推回云厂资本开支和芯片订单，解释上游高增长能持续多久。",
     "has_note": true,
     "themes": [
       "NVDA",
@@ -14159,6 +14193,8 @@
     "title": "特斯拉不到170仍不急买：估值与趋势两套条件",
     "chars": 822,
     "read": true,
+    "featured": true,
+    "featured_reason": "估值与时机｜认为特斯拉跌至较低价格值得研究，却区分长期分批和趋势交易的不同入场条件。",
     "has_note": true,
     "themes": [
       "TSLA",
