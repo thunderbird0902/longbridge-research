@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Check report layout validation
+        run: python3 scripts/test_report_structure.py
       - name: Validate and prepare static site
         run: python3 scripts/build_pages.py
       - name: Upload site

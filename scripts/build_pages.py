@@ -24,6 +24,59 @@ class Links(HTMLParser):
                          if key in ("href", "src", "action") and value)
 
 
+class ReportStructure(HTMLParser):
+    """Catch broken containers before a browser silently rearranges the report."""
+    VOID = set("area base br col embed hr img input link meta param source track wbr".split())
+
+    def __init__(self):
+        super().__init__()
+        self.stack = []
+        self.ids = set()
+        self.anchors = []
+        self.cases = set()
+        self.case_links = []
+        self.errors = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        ident = attrs.get("id")
+        if ident:
+            if ident in self.ids:
+                self.errors.append(f"Duplicate id: {ident}")
+            self.ids.add(ident)
+        href = attrs.get("href", "")
+        if href.startswith("#") and len(href) > 1:
+            self.anchors.append(href[1:])
+        if "data-case-detail" in attrs:
+            self.cases.add(attrs["data-case-detail"])
+        for key in ("data-case-id", "data-open-case", "data-lineage-case"):
+            if key in attrs:
+                self.case_links.append(attrs[key])
+        if self.stack and self.stack[-1][0] == "main":
+            if tag != "nav" and "report-content" not in attrs.get("class", "").split():
+                self.errors.append(f"Content escaped the report column: {tag} {ident or ''}")
+        if tag not in self.VOID:
+            self.stack.append((tag, ident))
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in self.VOID:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        if not self.stack or self.stack[-1][0] != tag:
+            self.errors.append(f"Mismatched closing {tag} at line {self.getpos()[0]}")
+        else:
+            self.stack.pop()
+
+    def validate(self):
+        if self.stack:
+            self.errors.append("Unclosed report containers")
+        self.errors.extend(f"Missing anchor: {x}" for x in set(self.anchors) - self.ids)
+        self.errors.extend(f"Missing case: {x}" for x in set(self.case_links) - self.cases)
+        return self.errors
+
+
 def main():
     sources = [ROOT / name for name in FILES]
     sources.extend(sorted((ROOT / "library").glob("*.html")))
@@ -41,7 +94,12 @@ def main():
         if source.suffix != ".html":
             continue
         parser = Links()
-        parser.feed(source.read_text(encoding="utf-8"))
+        text = source.read_text(encoding="utf-8")
+        parser.feed(text)
+        if source.name == "longbridge-research.html":
+            structure = ReportStructure()
+            structure.feed(text)
+            errors.extend(structure.validate())
         for url in parser.urls:
             parsed = urlsplit(url)
             if parsed.scheme or parsed.netloc or not parsed.path:
