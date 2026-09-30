@@ -1,0 +1,11 @@
+html[data-offline-preparing]::after{content:'正在准备完整页面与离线正文…';position:fixed;inset:0;z-index:10000;display:grid;place-items:center;background:#f4f3ee;color:#233b37;font:17px/1.8 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;padding:24px;text-align:center}
+#offline-status{font-size:13px;color:#c9dacf;margin:16px 0 0}
+#offline-reader{position:fixed;inset:0;width:min(1100px,96vw);max-width:none;height:94dvh;max-height:94dvh;padding:0;border:1px solid #b9c9bb;border-radius:12px;background:#f4f3ee;color:#233b37;overflow:hidden}
+#offline-reader::backdrop{background:#142e28b3}
+#offline-reader[open]{display:flex;flex-direction:column}
+.offline-reader-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#eef3ea;border-bottom:1px solid #c8d8c9;flex-shrink:0}
+#offline-reader-title{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-weight:650}
+.offline-reader-bar button{flex-shrink:0}
+#offline-frame{display:block;flex:1;width:100%;min-height:0;border:0;background:#f4f3ee}
+@media(max-width:600px){#offline-reader{width:100%;height:100dvh;max-height:100dvh;border:0;border-radius:0;margin:0}.offline-reader-bar{padding:10px;gap:8px;flex-wrap:wrap}#offline-reader-title{order:-1;flex-basis:100%;font-size:15px}.offline-reader-bar button{font-size:14px;padding:7px 12px}#offline-reader-close{margin-left:auto}}
+@media print{#offline-reader,#offline-status{display:none!important}}

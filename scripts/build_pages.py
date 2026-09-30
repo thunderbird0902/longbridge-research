@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import shutil
 from zipfile import ZIP_DEFLATED, ZipFile
+from embed_offline import embed_report
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "_site"
@@ -97,6 +98,8 @@ def main():
         text = source.read_text(encoding="utf-8")
         parser.feed(text)
         if source.name == "longbridge-research.html":
+            if embed_report(text) != text:
+                errors.append("Offline content is stale. Run: python3 scripts/embed_offline.py")
             structure = ReportStructure()
             structure.feed(text)
             errors.extend(structure.validate())
